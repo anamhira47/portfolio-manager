@@ -4,9 +4,10 @@
 
 
 Main Features of program:
-- Keep track of portfolio holdings
-- View change in monetary value of holdings over time.
-- Add/Sell holdings and view portfolio value.
+- Add Entries to your portfolio
+- View Transaction history of your portfolio
+- View Portfolio Value
+- View the value of specific coins
 
 
 A very efficient way to keep track of all your cryptocurrency holdings, in one convenient place, check prices see change in prices
