@@ -57,6 +57,10 @@ public class PortfolioTest {
         p.addEntry(eth, 5);
         assertEquals("Bought 4 Bitcoin @ 10000\n" +
                 "Bought 5 Ethereum @ 300\n", p.transactionHistory());
+        p.addEntry(btc, 5);
+        assertEquals("Bought 9 Bitcoin @ 10000\n" +
+                "Bought 5 Ethereum @ 300\n" +
+                "Bought 5 Bitcoin @ 10000\n", p.transactionHistory());
 
     }
 

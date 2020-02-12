@@ -18,7 +18,7 @@ public class TradeDeskTest {
     public void runbefore() {
         btc = new Coin("Bitcoin", 10000);
         eth = new Coin("Ethereum", 300);
-        nano = new Coin("Nano", 1);
+        nano = new Coin("NANO", 1);
         xmr = new Coin("XMR", 92);
         pe = new PortfolioEntry(xmr, 3);
         pe1 = new PortfolioEntry(btc, 4);
