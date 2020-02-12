@@ -79,7 +79,7 @@ public class Portfolio {
             int price = c.getPrice();
             int quantity = i.getQuantity();
             String name = c.getCoinName();
-            output += "Quantity:  " + quantity + "Coin " + name + " @ " + price + "\n";
+            output += "Quantity: " + quantity + " Coin: " + name + " @ " + price + "\n";
 
         }
         return output;

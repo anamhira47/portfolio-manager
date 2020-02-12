@@ -63,6 +63,17 @@ public class PortfolioTest {
                 "Bought 5 Bitcoin @ 10000\n", p.transactionHistory());
 
     }
+    @Test
+    public void viewPortfolioTest() {
+        p.addEntry(btc, 4);
+        assertEquals("Quantity: 4 Coin: Bitcoin @ 10000\n", p.viewPortfolio());
+        p.addEntry(eth, 5);
+        assertEquals("Quantity: 4 Coin: Bitcoin @ 10000\n" +
+                "Quantity: 5 Coin: Ethereum @ 300\n", p.viewPortfolio());
+        p.addEntry(btc, 5);
+        assertEquals("Quantity: 9 Coin: Bitcoin @ 10000\n" +
+                "Quantity: 5 Coin: Ethereum @ 300\n", p.viewPortfolio());
+    }
 
     @Test
     public void testPortfolioNumEntries() {
