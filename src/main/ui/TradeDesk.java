@@ -4,8 +4,7 @@ import model.Coin;
 import model.Portfolio;
 import model.PortfolioEntry;
 
-import javax.sound.sampled.Port;
-import java.sql.SQLOutput;
+
 import java.util.Scanner;
 
 
@@ -49,15 +48,16 @@ public class TradeDesk {
         System.out.println("\nRemember to invest responsibly");
 
     }
-
+   //Removes c ode will implement later
+    //        } else if (command.equals("r")) {
+//
+//            removePortfolioEntry();
+//        }
     //Modifies this
     //Effects processes user command
     private void processCommand(String command) {
         if (command.equals("a")) {
             addPortfolioEntry();
-        } else if (command.equals("r")) {
-
-            removePortfolioEntry();
         } else if (command.equals("t")) {
             viewTransactionHistory();
         } else if (command.equals("s")) {
@@ -76,7 +76,7 @@ public class TradeDesk {
     private void displayTradeDesk() {
         System.out.println("\nSelect from:");
         System.out.println("\ta -> Add an entry to Portfolio");
-        System.out.println("\tr -> Remove entry from portfolio");
+      //  System.out.println("\tr -> Remove entry from portfolio");
         System.out.println("\tt -> View transaction history");
         System.out.println("\ts -> View Portfolio Value");
         System.out.println("\tp -> View Coin prices");
@@ -84,15 +84,15 @@ public class TradeDesk {
         System.out.println("\tq -> quit");
     }
 
-
-    private void removePortfolioEntry() {
-        input3 = new Scanner(System.in);
-        System.out.println("What coin would you like to remove BTC/ETH/NANO/XMR");
-        String coinSelection = input3.nextLine().toUpperCase();
-        portfolio.removeEntry(coinSelection);
-
-
-    }
+//
+//    private void removePortfolioEntry() {
+//        input3 = new Scanner(System.in);
+//        System.out.println("What coin would you like to remove BTC/ETH/NANO/XMR");
+//        String coinSelection = input3.nextLine().toUpperCase();
+//        portfolio.removeEntry(coinSelection);
+//
+//
+//    }
     //Modifies this
     //Effects adds a portfolio entry to the portfolio
 
@@ -138,13 +138,13 @@ public class TradeDesk {
     private void viewPortfolioString() {
         System.out.println(portfolio.viewPortfolio());
     }
-    //Shows the total value of the portfolio
+    //Effects Shows the total value of the portfolio
 
     private void viewPortfolioValue() {
         System.out.println(portfolio.getPortfolioValue());
 
     }
-    //Shows the coin prices of the individual coins
+    //Effects Shows the coin prices of the individual coins
 
     private void viewCoinPrices() {
         input3 = new Scanner(System.in);

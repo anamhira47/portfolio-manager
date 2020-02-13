@@ -94,20 +94,20 @@ public class Portfolio {
     //Modifies this
     //Effects removes an entry from the portfolio
 
-    public void removeEntry(String coin) {
-        PortfolioEntry curr = null;
-
-        for (PortfolioEntry i : this.portfolio) {
-            Coin c = i.getCoin();
-            if (c.getCoinName().equals(coin)) {
-                curr = i;
-                removed.add(curr);
-            }
-        }
-        if (curr != null) {
-            portfolio.remove(curr);
-        }
-    }
+//    public void removeEntry(String coin) {
+//        PortfolioEntry curr = null;
+//
+//        for (PortfolioEntry i : this.portfolio) {
+//            Coin c = i.getCoin();
+//            if (c.getCoinName().equals(coin)) {
+//                curr = i;
+//                removed.add(curr);
+//            }
+//        }
+//        if (curr != null) {
+//            portfolio.remove(curr);
+//        }
+//    }
 
 }
 

@@ -85,16 +85,16 @@ public class PortfolioTest {
         assertEquals(2, p.portfolioNumEntries());
     }
 
-    @Test
-    public void removePortfolioTest() {
-        p.addEntry(btc, 5);
-        assertEquals(1, p.portfolioNumEntries());
-        p.removeEntry("Bitcoin");
-        assertEquals(0, p.portfolioNumEntries());
-        p.addEntry(eth, 4);
-        p.addEntry(btc, 4);
-        p.removeEntry("Ethereum");
-        assertEquals(0, p.portfolioNumEntries());
-    }
+//    @Test
+//    public void removePortfolioTest() {
+//        p.addEntry(btc, 5);
+//        assertEquals(1, p.portfolioNumEntries());
+//        p.removeEntry("Bitcoin");
+//        assertEquals(0, p.portfolioNumEntries());
+//        p.addEntry(eth, 4);
+//        p.addEntry(btc, 4);
+//        p.removeEntry("Ethereum");
+//        assertEquals(0, p.portfolioNumEntries());
+//    }
 
 }
