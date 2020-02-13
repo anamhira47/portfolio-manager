@@ -55,6 +55,7 @@ public class TradeDesk {
 //        }
     //Modifies this
     //Effects processes user command
+
     private void processCommand(String command) {
         if (command.equals("a")) {
             addPortfolioEntry();
