@@ -11,6 +11,9 @@ Main Features of program:
 - As a user I want to be able View my Portfolio Value
 - As a user I want to view the price of a specific coin.
 - As a user I want to be able to view the entries in my portfolio
+- As a user I want to be able to save my portfolio to file
+- As a user I want to be able to save my transaction history to file.
+- As a user I want to be able to view my portfolio again after closing the application.
 
 
 

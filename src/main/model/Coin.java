@@ -20,5 +20,4 @@ public class Coin {
     public int getPrice() {
         return price;
     }
-
 }
