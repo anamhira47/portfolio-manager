@@ -3,6 +3,8 @@ package model;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.io.IOException;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 public class PortfolioEntryTest {
@@ -16,11 +18,11 @@ public class PortfolioEntryTest {
     private PortfolioEntry pe3;
 
     @BeforeEach
-    public void runbefore() {
-        btc = new Coin("Bitcoin", 10000);
-        eth = new Coin("Ethereum", 300);
-        nano = new Coin("Nano", 1);
-        xmr = new Coin("XMR", 92);
+    public void runbefore() throws IOException {
+        btc = new Coin("Bitcoin");
+        eth = new Coin("Ethereum");
+        nano = new Coin("Nano");
+        xmr = new Coin("Monero");
         pe = new PortfolioEntry(xmr, 3);
         pe1 = new PortfolioEntry(btc, 15);
     }
@@ -33,7 +35,7 @@ public class PortfolioEntryTest {
     @Test
     public void getCoinTest() {
         String c = pe.getCoin().getCoinName();
-        assertEquals("XMR", c );
+        assertEquals("Monero", c );
 
     }
 

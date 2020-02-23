@@ -2,6 +2,9 @@ package model;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import java.io.IOException;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 public class PortfolioTest {
@@ -16,11 +19,11 @@ public class PortfolioTest {
     private Portfolio p;
 
     @BeforeEach
-    public void runbefore() {
-          btc = new Coin("Bitcoin", 10000);
-          eth = new Coin("Ethereum", 300);
-          nano = new Coin("Nano", 1);
-          xmr = new Coin("XMR", 92);
+    public void runbefore() throws IOException {
+          btc = new Coin("Bitcoin");
+          eth = new Coin("Ethereum");
+          nano = new Coin("Nano");
+          xmr = new Coin("Monero");
           pe = new PortfolioEntry(xmr, 3);
           pe1 = new PortfolioEntry(btc, 4);
           pe2 = new PortfolioEntry(eth, 4);

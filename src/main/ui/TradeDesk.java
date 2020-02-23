@@ -5,15 +5,16 @@ import model.Portfolio;
 import model.PortfolioEntry;
 
 
+import java.io.IOException;
 import java.util.Scanner;
 
 
 //Layout gotten from the Teller app project//
 public class TradeDesk {
-    protected Coin btc = new Coin("BTC", 10000);
-    protected Coin eth = new Coin("ETH", 300);
-    protected Coin nano = new Coin("NANO", 1);
-    protected Coin xmr = new Coin("XMR", 92);
+    protected Coin btc = new Coin("Bitcoin");
+    protected Coin eth = new Coin("Ethereum");
+    protected Coin nano = new Coin("Nano");
+    protected Coin xmr = new Coin("Monero");
     private Scanner input2;
     private Scanner input3;
     private Scanner userInput;
@@ -21,7 +22,7 @@ public class TradeDesk {
 
     //Effects runs the TradeDesk
 
-    public TradeDesk() {
+    public TradeDesk() throws IOException {
         runTradeDesk();
     }
 

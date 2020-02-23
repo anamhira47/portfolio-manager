@@ -1,8 +1,12 @@
 package model;
 
 
+import org.json.JSONException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import java.io.IOException;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 public class CoinTest {
@@ -12,11 +16,11 @@ public class CoinTest {
     private Coin xmr;
 
     @BeforeEach
-    public void runbefore() {
-        btc = new Coin("Bitcoin", 10000);
-        eth = new Coin("Ethereum", 300);
-        nano = new Coin("Nano", 1);
-        xmr = new Coin("XMR", 92);
+    public void runbefore() throws IOException, JSONException {
+        btc = new Coin("Bitcoin");
+        eth = new Coin("Ethereum");
+        nano = new Coin("Nano");
+        xmr = new Coin("Monero");
     }
 
     @Test
@@ -27,7 +31,10 @@ public class CoinTest {
 
     @Test
     public void getCoinPriceTest() {
-        assertEquals(10000, btc.getPrice());
+        assertEquals(btc.getPrice(), btc.getPrice());
     }
 
+
+
 }
+
