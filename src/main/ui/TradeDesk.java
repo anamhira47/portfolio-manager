@@ -81,7 +81,7 @@ public class TradeDesk {
 
     }
 
-    private void uploadPortfolio() throws FileNotFoundException {
+    private void uploadPortfolio() throws IOException {
         Reader.reader(portfolio.viewPortfolioArraylist());
 
     }
