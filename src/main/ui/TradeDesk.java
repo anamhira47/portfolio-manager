@@ -3,8 +3,10 @@ package ui;
 import model.Coin;
 import model.Portfolio;
 import model.PortfolioEntry;
+import persistence.Reader;
+import persistence.Writer;
 
-
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Scanner;
 
@@ -18,7 +20,7 @@ public class TradeDesk {
     private Scanner input2;
     private Scanner input3;
     private Scanner userInput;
-    private Portfolio portfolio = new Portfolio();
+    public Portfolio portfolio = new Portfolio();
 
     //Effects runs the TradeDesk
 
@@ -29,7 +31,7 @@ public class TradeDesk {
     //Modifies This
     //Effects The tradedesk command line interface processes the input given.
 
-    private void runTradeDesk() {
+    private void runTradeDesk() throws IOException {
         boolean dontStop = true;
         String command = null;
         userInput = new Scanner(System.in);
@@ -49,7 +51,7 @@ public class TradeDesk {
         System.out.println("\nRemember to invest responsibly");
 
     }
-   //Removes c ode will implement later
+    //Removes c ode will implement later
     //        } else if (command.equals("r")) {
 //
 //            removePortfolioEntry();
@@ -57,7 +59,7 @@ public class TradeDesk {
     //Modifies this
     //Effects processes user command
 
-    private void processCommand(String command) {
+    private void processCommand(String command) throws IOException {
         if (command.equals("a")) {
             addPortfolioEntry();
         } else if (command.equals("t")) {
@@ -66,23 +68,40 @@ public class TradeDesk {
             viewPortfolioValue();
         } else if (command.equals("p")) {
             viewCoinPrices();
-        } else if (command.equals("v"))  {
+        } else if (command.equals("v")) {
             viewPortfolioString();
+
+        } else if (command.equals("d")) {
+            downloadPortfolio();
+        } else if (command.equals("u")) {
+            uploadPortfolio();
         } else {
             System.out.println("Selection not valid");
         }
 
+    }
+
+    private void uploadPortfolio() throws FileNotFoundException {
+        Reader.reader(portfolio.viewPortfolioArraylist());
+
+    }
+
+    private void downloadPortfolio() throws IOException {
+        Writer.write(portfolio.viewPortfolioArraylist());
     }
     //Effects displays the options to the user
 
     private void displayTradeDesk() {
         System.out.println("\nSelect from:");
         System.out.println("\ta -> Add an entry to Portfolio");
-      //  System.out.println("\tr -> Remove entry from portfolio");
+        //  System.out.println("\tr -> Remove entry from portfolio");
         System.out.println("\tt -> View transaction history");
         System.out.println("\ts -> View Portfolio Value");
         System.out.println("\tp -> View Coin prices");
         System.out.println("\tv -> View Portfolio");
+        System.out.println("\td -> Download portfolio JSON file");
+        System.out.println("\tn -> Download transaction history portfolio value.");
+        System.out.println("\tu -> Upload portfolio to trade desk.");
         System.out.println("\tq -> quit");
     }
 
@@ -125,11 +144,10 @@ public class TradeDesk {
         }
 
 
-
     }
     //Effects displays the transaction history
 
-    private void viewTransactionHistory() {
+    private void viewTransactionHistory() throws IOException {
         System.out.println(portfolio.transactionHistory());
 
 
@@ -154,32 +172,25 @@ public class TradeDesk {
         System.out.println("What coin would you like to check the price of. BTC/ETH/NANO/XMR");
         String coinSelection = input3.nextLine().toLowerCase();
         PortfolioEntry pe;
-        Coin coinchoise = btc;
+        Coin coinchoice = btc;
         if (coinSelection.equals("btc")) {
-            coinchoise = btc;
-            System.out.println("The current price is " + coinchoise.getPrice());
+            coinchoice = btc;
+            System.out.println("The current price is " + coinchoice.getPrice());
         } else if (coinSelection.equals("eth")) {
-            coinchoise = eth;
-            System.out.println("The current price is " + coinchoise.getPrice());
+            coinchoice = eth;
+            System.out.println("The current price is " + coinchoice.getPrice());
         } else if (coinSelection.equals("nano")) {
-            coinchoise = nano;
-            System.out.println("The current price is " + coinchoise.getPrice());
+            coinchoice = nano;
+            System.out.println("The current price is " + coinchoice.getPrice());
         } else if (coinSelection.equals("xmr")) {
-            coinchoise = xmr;
-            System.out.println("The current price is " + coinchoise.getPrice());
+            coinchoice = xmr;
+            System.out.println("The current price is " + coinchoice.getPrice());
         } else {
             System.out.println("This coin has not been imp"
                     + "lemented yet, check beck as we are continually adding more coins.");
         }
 
     }
-
-
-
-
-
-
-
 
 
 }

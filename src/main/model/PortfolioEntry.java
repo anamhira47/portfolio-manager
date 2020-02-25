@@ -1,6 +1,7 @@
 package model;
 
 public class PortfolioEntry {
+
     private int quantity;
     private Coin coin;
 

@@ -1,15 +1,14 @@
 package model;
 
-import javax.sound.sampled.Port;
 import java.util.ArrayList;
 import java.util.List;
 //Basic structure from the ASSIGN2 grocerybill
 
 public class Portfolio {
-    private List<PortfolioEntry> portfolio;
-    private List<PortfolioEntry> history;
-    private List<Coin> coinsAdded;
-    private List<PortfolioEntry> removed;
+    public List<PortfolioEntry> portfolio;
+    public List<PortfolioEntry> history;
+    public List<Coin> coinsAdded;
+    public List<PortfolioEntry> removed;
 
     public Portfolio() {
         portfolio = new ArrayList<>();
@@ -20,6 +19,9 @@ public class Portfolio {
 
     }
 
+    public List<PortfolioEntry> viewPortfolioArraylist() {
+        return this.portfolio;
+    }
     //Modifies this
     //Effects adds an entry to portfolio array
 
@@ -60,7 +62,7 @@ public class Portfolio {
     //Effects Return transaction history
     public String transactionHistory() {
         String output = "";
-        for (PortfolioEntry i: this.history) {
+        for (PortfolioEntry i : this.history) {
             Coin c = i.getCoin();
             int price = c.getPrice();
             int quantity = i.getQuantity();
@@ -74,7 +76,7 @@ public class Portfolio {
 
     public String viewPortfolio() {
         String output = "";
-        for (PortfolioEntry i: this.portfolio) {
+        for (PortfolioEntry i : this.portfolio) {
             Coin c = i.getCoin();
             int price = c.getPrice();
             int quantity = i.getQuantity();
