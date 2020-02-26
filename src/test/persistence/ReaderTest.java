@@ -40,7 +40,7 @@ public class ReaderTest {
 
         @Test
         public void readerTest() {
-           String reader = {"quantity":3, "coin":{"coinName":"Monero","price":74}},{"quantity":15,"coin":{"coinName":"Bitcoin","price":9149}};
+           //String reader = {"quantity":3, "coin":{"coinName":"Monero","price":74}},{"quantity":15,"coin":{"coinName":"Bitcoin","price":9149}};
 
         }
 
