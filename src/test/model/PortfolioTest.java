@@ -47,35 +47,35 @@ public class PortfolioTest {
     public void testGetPortfolioValue() {
         p.addEntry(btc, 4);
 
-        assertEquals(40000, p.getPortfolioValue());
+        assertEquals(4*btc.getPrice(), p.getPortfolioValue());
         p.addEntry(btc,4);
-        assertEquals(80000,p.getPortfolioValue());
+        assertEquals(8*btc.getPrice(),p.getPortfolioValue());
         p.addEntry(eth, 5);
-        assertEquals(81500, p.getPortfolioValue());
+        assertEquals(8*btc.getPrice()+5*eth.getPrice(), p.getPortfolioValue());
     }
     @Test
     public void testTransactionHistory() {
         p.addEntry(btc, 4);
-        assertEquals("Bought 4 Bitcoin @ 10000\n", p.transactionHistory());
+        assertEquals("Bought 4 Bitcoin @ " + btc.getPrice() + "\n", p.transactionHistory());
         p.addEntry(eth, 5);
-        assertEquals("Bought 4 Bitcoin @ 10000\n" +
-                "Bought 5 Ethereum @ 300\n", p.transactionHistory());
+        assertEquals("Bought 4 Bitcoin @ " + btc.getPrice() + "\n" +
+                "Bought 5 Ethereum @ " + eth.getPrice() + "\n", p.transactionHistory());
         p.addEntry(btc, 5);
-        assertEquals("Bought 9 Bitcoin @ 10000\n" +
-                "Bought 5 Ethereum @ 300\n" +
-                "Bought 5 Bitcoin @ 10000\n", p.transactionHistory());
+        assertEquals("Bought 9 Bitcoin @ " + btc.getPrice() + "\n" +
+                "Bought 5 Ethereum @ " + eth.getPrice() + "\n" +
+                "Bought 5 Bitcoin @ " + btc.getPrice() + "\n", p.transactionHistory());
 
     }
     @Test
     public void viewPortfolioTest() {
         p.addEntry(btc, 4);
-        assertEquals("Quantity: 4 Coin: Bitcoin @ 10000\n", p.viewPortfolio());
+        assertEquals("Quantity: 4 Coin: Bitcoin @ " + btc.getPrice() + "\n", p.viewPortfolio());
         p.addEntry(eth, 5);
-        assertEquals("Quantity: 4 Coin: Bitcoin @ 10000\n" +
-                "Quantity: 5 Coin: Ethereum @ 300\n", p.viewPortfolio());
+        assertEquals("Quantity: 4 Coin: Bitcoin @ " + btc.getPrice() + "\n" +
+                "Quantity: 5 Coin: Ethereum @ " + eth.getPrice() + "\n", p.viewPortfolio());
         p.addEntry(btc, 5);
-        assertEquals("Quantity: 9 Coin: Bitcoin @ 10000\n" +
-                "Quantity: 5 Coin: Ethereum @ 300\n", p.viewPortfolio());
+        assertEquals("Quantity: 9 Coin: Bitcoin @ " + btc.getPrice() + "\n" +
+                "Quantity: 5 Coin: Ethereum @ " + eth.getPrice() + "\n", p.viewPortfolio());
     }
 
     @Test
