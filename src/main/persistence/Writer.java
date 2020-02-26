@@ -13,6 +13,7 @@ import java.util.List;
 
 public class Writer {
 
+    //Effects writes a json file of a list of portfolio entries.
     public static void write(List<PortfolioEntry> p) throws IOException {
         FileWriter fileWriter = new FileWriter("data/portfolio.json");
 
@@ -22,11 +23,7 @@ public class Writer {
         gson.toJson(p, fileWriter);
         fileWriter.close();
         System.out.println("Your file has been downloaded");
-//        try (FileWriter writer = new FileWriter("data/portfolio.json")) {
-//            gson.toJson(p);
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
+
 
     }
 

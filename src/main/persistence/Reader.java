@@ -31,7 +31,8 @@ public class Reader {
     public List<PortfolioEntry> newread;
 
 
-
+    //Modifies portfolio entry
+    //Effects Reads json file and create a list of portfolio entries from that.
     public static void reader(List<PortfolioEntry> p) throws IOException {
 
         Gson gson = new Gson();

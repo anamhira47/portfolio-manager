@@ -14,7 +14,7 @@ public class Coin {
     private String coinName;
     public int price;
 
-
+    //Effects Reads a json and creates a string from that
     private String readAll(Reader rd) throws IOException {
         StringBuilder sb = new StringBuilder();
         int cp;
@@ -24,6 +24,7 @@ public class Coin {
         return sb.toString();
     }
 
+    //Effects creates JSON object from a given url
     public JSONObject readJsonFromUrl(String url) throws IOException, JSONException {
         InputStream is = new URL(url).openStream();
         try {
