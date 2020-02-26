@@ -87,6 +87,12 @@ public class PortfolioTest {
         p.addEntry(eth, 4);
         assertEquals(2, p.portfolioNumEntries());
     }
+    @Test
+    public void testViewPortfolioArraylist() {
+        p.addEntry(btc, 3);
+        String name = p.viewPortfolioArraylist().get(0).getCoin().getCoinName();
+        assertEquals("Bitcoin", name);
+    }
 
 //    @Test
 //    public void removePortfolioTest() {

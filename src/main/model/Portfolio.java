@@ -18,6 +18,7 @@ public class Portfolio {
 
 
     }
+    //Effects shows the portfolios arraylist
 
     public List<PortfolioEntry> viewPortfolioArraylist() {
         return this.portfolio;
