@@ -4,6 +4,8 @@ package persistence;
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
+import javafx.application.Application;
+import javafx.stage.FileChooser;
 import model.PortfolioEntry;
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -24,7 +26,7 @@ import java.nio.file.Paths;
 import java.util.List;
 
 
-public class Reader {
+public class Reader  {
 
     public static JSONArray jsonArray;
 
@@ -33,23 +35,15 @@ public class Reader {
 
     //Modifies portfolio entry
     //Effects Reads json file and create a list of portfolio entries from that.
-    public static void reader(List<PortfolioEntry> p) throws IOException {
+    public static void reader(File file, List<PortfolioEntry> p) throws IOException {
 
         Gson gson = new Gson();
 
 
-        JFileChooser chooser = new JFileChooser();
-        FileNameExtensionFilter filter = new FileNameExtensionFilter(
-                "JSON File", "json");
-        chooser.setFileFilter(filter);
-        int returnVal = chooser.showOpenDialog(null);
-        if (returnVal == JFileChooser.APPROVE_OPTION) {
-            System.out.println("You chose to open this file: " + chooser.getSelectedFile().getName());
 
-        }
-        File json = chooser.getSelectedFile();
 
-        String str = FileUtils.readFileToString(json);
+
+        String str = FileUtils.readFileToString(file);
 
         jsonArray = new JSONArray(str);
 

@@ -73,18 +73,13 @@ public class TradeDesk {
 
         } else if (command.equals("d")) {
             downloadPortfolio();
-        } else if (command.equals("u")) {
-            uploadPortfolio();
-        } else {
+        }  else {
             System.out.println("Selection not valid");
         }
 
     }
 
-    private void uploadPortfolio() throws IOException {
-        Reader.reader(portfolio.viewPortfolioArraylist());
 
-    }
 
     private void downloadPortfolio() throws IOException {
         Writer.write(portfolio.viewPortfolioArraylist());

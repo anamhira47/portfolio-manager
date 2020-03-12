@@ -4,27 +4,30 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import model.Coin;
 import model.Portfolio;
 
+import java.io.File;
 import java.io.IOException;
+import java.util.Scanner;
 
-
-public class Main extends Application {
+public class View extends Application {
     protected Coin btc = new Coin("Bitcoin");
     protected Coin eth = new Coin("Ethereum");
     protected Coin nano = new Coin("Nano");
     protected Coin xmr = new Coin("Monero");
+    public Portfolio portfolio = new Portfolio();
 
-    private Stage primaryStage;
-
-    public Main() throws IOException {
+    public View() throws IOException {
     }
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         launch(args);
     }
+
+    private Stage primaryStage;
 
     @Override
     public void start(Stage primaryStage) {
@@ -49,6 +52,9 @@ public class Main extends Application {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
+
+
+
+
 }
