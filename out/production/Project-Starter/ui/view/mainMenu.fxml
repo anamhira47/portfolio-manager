@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.view.MainMenuController">
+   <children>
+      <Text layoutX="208.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Portfolio Management System" />
+      <Button fx:id="newPortfolio" defaultButton="true" layoutX="14.0" layoutY="76.0" mnemonicParsing="false" onAction="#setNewPortfolioClick" prefHeight="99.0" prefWidth="256.0" text="New Portfolio" />
+      <Button fx:id="loadPortfolio" layoutX="14.0" layoutY="212.0" mnemonicParsing="false" onAction="#setLoadPortfolio" prefHeight="119.0" prefWidth="256.0" text="Load Portfolio" />
+   </children>
+</AnchorPane>
