@@ -2,10 +2,11 @@ package ui.view;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import model.Portfolio;
@@ -27,6 +28,11 @@ public class MainMenuController extends Controller {
 
     @FXML
     public void setNewPortfolioClick() throws IOException {
+        String musicFile = "invest.mp3";
+
+        //Media sound = new Media(new File(musicFile).toURI().toString());
+        //MediaPlayer mediaPlayer = new MediaPlayer(sound);
+        //mediaPlayer.play();
 
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(View.class.getResource("view/portfolioGUI.fxml"));
@@ -61,19 +67,21 @@ public class MainMenuController extends Controller {
         if (file != null) {
 
             Reader.reader(file, portfolio.viewPortfolioArraylist());
-            //FXMLLoader loader = new FXMLLoader();
+            FXMLLoader loader1 = new FXMLLoader();
 
-            //loader.setLocation(View.class.getResource("view/portfolioGUI.fxml"));
-            PortfolioGuiController controller = loader.getController();
+            loader1.setLocation(View.class.getResource("view/portfolioGUI.fxml"));
+            PortfolioGuiController controller = loader1.getController();
             controller.initData(portfolio);
-            //AnchorPane mainMenu1 = (AnchorPane) loader.load();
+            AnchorPane mainMenu1 = (AnchorPane) loader1.load();
 
-            //Scene scene1 = new Scene(mainMenu1);
+            Scene scene1 = new Scene(mainMenu1);
 
 
-            //Stage window1 = (Stage) loadPortfolio.getScene().getWindow();
+            Stage window1 = (Stage) loadPortfolio.getScene().getWindow();
             //Stage window2 = new Stage();
-            //window2.setScene(scene1);
+            window1.setScene(scene1);
+
+
         }
 
     }
@@ -81,7 +89,6 @@ public class MainMenuController extends Controller {
     public Portfolio getPortfolio() {
         return portfolio;
     }
-
 
 
 }

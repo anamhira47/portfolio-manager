@@ -37,10 +37,11 @@ public class ViewPortfolioController extends Controller {
         controller.initData(portfolio);
         // Show the scene containing the root layout.
         Scene scene = new Scene(mainMenu);
+        Stage window = (Stage) mainmenu.getScene().getWindow();
         //Stagetage window = (Stage) .getScene().getWindow();
-        main = new Stage();
-        main.setScene(scene);
-        main.show();
+
+        window.setScene(scene);
+        window.show();
     }
 
     @FXML

@@ -36,10 +36,10 @@ public class ViewTxHistoryController extends Controller {
         controller.initData(portfolio);
         // Show the scene containing the root layout.
         Scene scene = new Scene(mainMenu);
-        //Stagetage window = (Stage) .getScene().getWindow();
+        Stage window = (Stage) mainmenu.getScene().getWindow();
         main = new Stage();
-        main.setScene(scene);
-        main.show();
+        window.setScene(scene);
+        window.show();
     }
 
     @FXML

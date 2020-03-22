@@ -67,10 +67,10 @@ public class PortfolioGuiController extends Controller {
 
         // Show the scene containing the root layout.
         Scene scene = new Scene(mainMenu);
-        //Stagetage window = (Stage) .getScene().getWindow();
+        Stage window = (Stage) mainMenubutton.getScene().getWindow();
         main = new Stage();
-        main.setScene(scene);
-        main.show();
+        window.setScene(scene);
+        window.show();
     }
 
     @FXML
@@ -112,10 +112,10 @@ public class PortfolioGuiController extends Controller {
         controller.initData(portfolio);
         // Show the scene containing the root layout.
         Scene scene = new Scene(mainMenu);
-        //Stagetage window = (Stage) .getScene().getWindow();
+        Stage window = (Stage) viewTxHistory.getScene().getWindow();
         main = new Stage();
-        main.setScene(scene);
-        main.show();
+        window.setScene(scene);
+        window.show();
 
     }
 
@@ -128,10 +128,10 @@ public class PortfolioGuiController extends Controller {
         controller.initData(portfolio);
         // Show the scene containing the root layout.
         Scene scene = new Scene(mainMenu);
-        //Stagetage window = (Stage) .getScene().getWindow();
+        Stage window = (Stage) viewPortEntries.getScene().getWindow();
         main = new Stage();
-        main.setScene(scene);
-        main.show();
+        window.setScene(scene);
+        window.show();
     }
 
     //public Portfolio getLoadedPortfolio() {
