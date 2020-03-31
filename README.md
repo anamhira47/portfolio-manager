@@ -33,3 +33,9 @@ Here is a video showcasing all these features;
 
 
 ![alt text](https://assets-global.website-files.com/5bc662b786ecfc12c8d29e0b/5d07c76a696bfc4b3cb88294_cryptocurrency.jpg "Logo Title Text 1")
+
+# Phase 4: Task 2
+I chose to implement a type hierarchy, there are two type hierarchies within the project.
+One of them is an Abstract Class "Controller"
+This abstract class is used by the classes MainMenuController, PortfolioGuiCOntroller, ViewHistoryController, ViewTxHistoryController
+The interface is ViewHistory and is implemented by the classes ViewPortfolio and ViewTxHistory

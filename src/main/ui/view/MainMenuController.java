@@ -26,6 +26,8 @@ public class MainMenuController extends Controller {
     }
 
 
+
+
     @FXML
     public void setNewPortfolioClick() throws IOException {
         String musicFile = "invest.mp3";
@@ -46,6 +48,7 @@ public class MainMenuController extends Controller {
 
 
     }
+
 
     @FXML
     public void setLoadPortfolio() throws IOException {
@@ -83,6 +86,13 @@ public class MainMenuController extends Controller {
 
 
         }
+
+
+
+    }
+
+    @Override
+    public void goBackMainMenu() throws IOException {
 
     }
 

@@ -13,7 +13,7 @@ import ui.View;
 import java.awt.*;
 import java.io.IOException;
 
-public class ViewTxHistoryController extends Controller {
+public class ViewTxHistoryController extends Controller implements ViewHistory {
     public Button mainmenu;
     Stage main;
     public TextArea txHistory;
@@ -28,7 +28,7 @@ public class ViewTxHistoryController extends Controller {
     }
 
     @FXML
-    public void gobackPortfolio() throws IOException {
+    public void goBackMainMenu() throws IOException {
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(View.class.getResource("view/portfolioGUI.fxml"));
         AnchorPane mainMenu = (AnchorPane) loader.load();
@@ -43,7 +43,7 @@ public class ViewTxHistoryController extends Controller {
     }
 
     @FXML
-    public void viewTxHistory() {
+    public void viewHistory() {
         String txhistorytext = portfolio.transactionHistory();
         txHistory.setText(txhistorytext);
     }

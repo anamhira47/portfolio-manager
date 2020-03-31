@@ -6,8 +6,8 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.view.ViewTxHistoryController">
    <children>
-      <Button fx:id="mainmenu" layoutX="411.0" layoutY="343.0" mnemonicParsing="false" onAction="#gobackPortfolio" text="Go back to Portfolio GUI" />
+      <Button fx:id="mainmenu" layoutX="411.0" layoutY="343.0" mnemonicParsing="false" onAction="#goBackMainMenu" text="Go back to Portfolio GUI" />
       <TextArea fx:id="txHistory" layoutX="46.0" layoutY="39.0" prefHeight="262.0" prefWidth="478.0" />
-      <Button fx:id="view" layoutX="67.0" layoutY="343.0" mnemonicParsing="false" onAction="#viewTxHistory" text="View" />
+      <Button fx:id="view" layoutX="67.0" layoutY="343.0" mnemonicParsing="false" onAction="#viewHistory" text="View" />
    </children>
 </AnchorPane>

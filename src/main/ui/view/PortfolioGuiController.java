@@ -59,6 +59,8 @@ public class PortfolioGuiController extends Controller {
 
     }
 
+    @Override
+
     @FXML
     public void goBackMainMenu() throws IOException {
         FXMLLoader loader = new FXMLLoader();

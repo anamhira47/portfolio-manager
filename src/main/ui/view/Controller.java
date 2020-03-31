@@ -25,4 +25,8 @@ public abstract class Controller  {
 
     public Controller() throws IOException {
     }
+
+    public abstract void goBackMainMenu() throws IOException;
+
+
 }
