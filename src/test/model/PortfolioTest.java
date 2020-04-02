@@ -61,7 +61,7 @@ public class PortfolioTest {
         assertEquals("Bought 4 Bitcoin @ " + btc.getPrice() + "\n" +
                 "Bought 5 Ethereum @ " + eth.getPrice() + "\n", p.transactionHistory());
         p.addEntry(btc, 5);
-        assertEquals("Bought 9 Bitcoin @ " + btc.getPrice() + "\n" +
+        assertEquals("Bought 4 Bitcoin @ " + btc.getPrice() + "\n" +
                 "Bought 5 Ethereum @ " + eth.getPrice() + "\n" +
                 "Bought 5 Bitcoin @ " + btc.getPrice() + "\n", p.transactionHistory());
 

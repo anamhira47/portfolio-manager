@@ -27,7 +27,8 @@ public class MainMenuController extends Controller {
 
 
 
-
+    //Modifies this
+    //Effects makes new portfolio on click
     @FXML
     public void setNewPortfolioClick() throws IOException {
         String musicFile = "invest.mp3";
@@ -49,7 +50,8 @@ public class MainMenuController extends Controller {
 
     }
 
-
+    //Modififes this
+    //Effects loads new portfolio on click from file chooser
     @FXML
     public void setLoadPortfolio() throws IOException {
 
@@ -96,6 +98,7 @@ public class MainMenuController extends Controller {
 
     }
 
+    //Effects returns portfolio
     public Portfolio getPortfolio() {
         return portfolio;
     }

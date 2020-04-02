@@ -39,3 +39,14 @@ I chose to implement a type hierarchy, there are two type hierarchies within the
 One of them is an Abstract Class "Controller"
 This abstract class is used by the classes MainMenuController, PortfolioGuiCOntroller, ViewHistoryController, ViewTxHistoryController
 The interface is ViewHistory and is implemented by the classes ViewPortfolio and ViewTxHistory
+
+# Phase 4: Task 3
+
+One example of poor cohesion within the code was the fact that the Portfolio class tracked the portfolio aswell as the transaction history
+to fix this, I have created a seperate class "Transaction" that is utilized by the portfolio class to be more in line with the single responsibility principle.
+
+Another problem within the code is the coupling of the controller class to the Coin class pertaining, to the selection of coins
+that the program has. This was fixed with the previous task with the addition of the abstract class Controller. This makes it so the selection of coins would only need to be changed in the fields of the abstract class controller.
+
+
+

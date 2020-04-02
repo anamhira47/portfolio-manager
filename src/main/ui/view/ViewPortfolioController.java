@@ -27,6 +27,7 @@ public class ViewPortfolioController extends Controller implements ViewHistory {
     public void initData(Portfolio portfolio1) {
         portfolio = portfolio1;
     }
+    //Effects goes back to main menu
 
     @FXML
     public void goBackMainMenu() throws IOException {
@@ -43,6 +44,7 @@ public class ViewPortfolioController extends Controller implements ViewHistory {
         window.setScene(scene);
         window.show();
     }
+    //Effects shows the portfolioentries on click
 
     @FXML
     public void viewHistory() {

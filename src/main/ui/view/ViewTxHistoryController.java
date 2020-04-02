@@ -12,6 +12,7 @@ import ui.View;
 
 import java.awt.*;
 import java.io.IOException;
+//Class for showing transaction history
 
 public class ViewTxHistoryController extends Controller implements ViewHistory {
     public Button mainmenu;
@@ -22,10 +23,14 @@ public class ViewTxHistoryController extends Controller implements ViewHistory {
 
     public ViewTxHistoryController() throws IOException {
     }
+    //Modifies this
+    //effects Intializeds portfolio
 
     public void initData(Portfolio portfolio1) {
         portfolio = portfolio1;
     }
+
+    //Effects goesbacktomainmenu
 
     @FXML
     public void goBackMainMenu() throws IOException {
@@ -41,6 +46,7 @@ public class ViewTxHistoryController extends Controller implements ViewHistory {
         window.setScene(scene);
         window.show();
     }
+    //Effects shows transaction history on the display
 
     @FXML
     public void viewHistory() {

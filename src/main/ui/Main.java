@@ -12,10 +12,7 @@ import java.io.IOException;
 
 
 public class Main extends Application {
-    protected Coin btc = new Coin("Bitcoin");
-    protected Coin eth = new Coin("Ethereum");
-    protected Coin nano = new Coin("Nano");
-    protected Coin xmr = new Coin("Monero");
+
 
     private Stage primaryStage;
 
@@ -26,6 +23,8 @@ public class Main extends Application {
         launch(args);
     }
 
+    //Effects starts the GUI
+
     @Override
     public void start(Stage primaryStage) {
         this.primaryStage = primaryStage;
@@ -34,6 +33,7 @@ public class Main extends Application {
 
 
     }
+    //Effects sets the stage
 
     public void mainMenu() {
         try {

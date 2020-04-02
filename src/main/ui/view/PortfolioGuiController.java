@@ -34,6 +34,7 @@ public class PortfolioGuiController extends Controller {
     private Portfolio portfolio;
     Stage main;
 
+    //Controller for portfolio gui
     public void initData(Portfolio portfolio1) {
         portfolio = portfolio1;
     }
@@ -41,6 +42,9 @@ public class PortfolioGuiController extends Controller {
     public PortfolioGuiController() throws IOException {
 
     }
+
+    //Modifies this
+    //Effects adds a portfolio entry on click
 
     @FXML
     public void addPortfolioEntry(ActionEvent event) {
@@ -59,6 +63,7 @@ public class PortfolioGuiController extends Controller {
 
     }
 
+    //Effects goes back to main menu
     @Override
 
     @FXML
@@ -75,10 +80,12 @@ public class PortfolioGuiController extends Controller {
         window.show();
     }
 
+    //Effects saves portfolio to fiel
     @FXML
     public void saveToFile() throws IOException {
         Writer.write(portfolio.viewPortfolioArraylist());
     }
+    //Effects displays portfolio value
 
     @FXML
     public void viewPortfolioValue(ActionEvent event) {
@@ -86,6 +93,7 @@ public class PortfolioGuiController extends Controller {
         portfolioValue.setText(value);
     }
 
+    //shows price of specified coin
     @FXML
     public void viewPriceofCoin(ActionEvent event) {
         String coinName = viewPrice.getText().toLowerCase();
@@ -105,6 +113,7 @@ public class PortfolioGuiController extends Controller {
 
     }
 
+    //effects displays transaction history of Portfolio
     @FXML
     public void setViewTxHistory() throws IOException {
         FXMLLoader loader = new FXMLLoader();
@@ -121,6 +130,7 @@ public class PortfolioGuiController extends Controller {
 
     }
 
+    //Effects Displays portfolio entries in portfolio
     @FXML
     public void setViewPortEntries() throws IOException {
         FXMLLoader loader = new FXMLLoader();
